@@ -40,13 +40,18 @@
 
     </LinearLayout>
 
+
     <ListView
         android:id="@+id/lstPersonas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="120dp"
         android:layout_marginBottom="35dp"
-        android:layout_centerHorizontal="true"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:background="@drawable/borde_list_view"
+        android:fastScrollEnabled="true"
+        android:fastScrollAlwaysVisible="true"
+        android:padding="25dp"
+        android:scrollbars="vertical" />
 
     <TextView
         android:id="@+id/tvDestinity"

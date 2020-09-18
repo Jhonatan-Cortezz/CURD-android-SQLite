@@ -4,10 +4,11 @@
     tools:context="com.jac.crudsqlite.MainActivity">
 
     <item
+        android:icon="@drawable/ic_baseline_add_24"
         android:id="@+id/action_limpiar"
         android:orderInCategory="1"
         android:title="@string/action_limpiar"
-        app:showAsAction="never" />
+        app:showAsAction="always|withText" />
     <item
         android:id="@+id/action_listaArticulos"
         android:orderInCategory="3"

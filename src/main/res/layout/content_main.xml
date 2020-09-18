@@ -90,7 +90,7 @@
                     android:layout_marginTop="30dp"
                     android:text="Guardar"
                     android:textColor="#fff"
-                    android:background="@color/colorPrimaryDark"
+                    android:background="@drawable/bordes_redondo"
                     android:onClick="alta"
                     android:shadowDx="-3"
                     android:drawableStart="@drawable/ic_baseline_save_alt_24"
@@ -107,7 +107,7 @@
                     android:layout_marginTop="30dp"
                     android:textColor="#fff"
                     android:onClick="deleteCode"
-                    android:background="@color/colorPrimaryDark"
+                    android:background="@drawable/bordes_redondo"
                     android:shadowDx="-3"
                     android:padding="5dp"
                     android:shadowDy="0"
@@ -123,7 +123,7 @@
                     android:text="Editar"
                     android:padding="5dp"
                     android:textColor="#fff"
-                    android:background="@color/colorPrimaryDark"
+                    android:background="@drawable/bordes_redondo"
                     android:drawableStart="@drawable/ic_baseline_edit_24"
                     android:onClick="editar"
                     android:layout_marginTop="30dp"
@@ -155,7 +155,7 @@
                     android:shadowDy="0"
                     android:shadowColor="#2314a8"
                     android:layout_width="150dp"
-                    android:background="@color/colorPrimaryDark"
+                    android:background="@drawable/bordes_redondo"
                     android:layout_height="wrap_content"/>
 
                 <Button
@@ -169,7 +169,7 @@
                     android:shadowDy="0"
                     android:shadowColor="#2314a8"
                     android:layout_width="150dp"
-                    android:background="@color/colorPrimaryDark"
+                    android:background="@drawable/bordes_redondo"
                     android:layout_height="wrap_content"/>
 
             </androidx.appcompat.widget.LinearLayoutCompat>

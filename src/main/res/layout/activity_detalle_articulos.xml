@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#e0e0e0"
+    tools:context=".DetalleArticulos">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="RESULTADO PARA LA BUSQUEDA"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:fontFamily="sans-serif-black"
+            android:textColor="@android:color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+
+            <androidx.cardview.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                card_view:cardUseCompatPadding="true"
+                android:elevation="4dp"
+                card_view:cardCornerRadius="3dp"
+                android:layout_margin="6dp"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/linearOne"
+                    android:orientation="vertical"
+                    android:padding="6dp"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="0dp"
+                        android:background="@color/colorPrimary">
+
+                        <TextView
+                            android:drawableStart="@drawable/ic_baseline_info_24"
+                            android:id="@+id/tvInformId"
+                            android:textColor="#000"
+                            android:drawableTint="@android:color/white"
+                            android:textAlignment="center"
+                            android:text="Detalles del articulo"
+                            android:padding="5dp"
+                            android:textStyle="bold"
+                            android:textSize="20dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvUserName"
+                        android:text="Código"
+                        android:layout_marginTop="25dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/tvCodigo1"
+                        android:text="NaN"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/userName1"
+                        android:text="Descripcion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/tvDescripcion1"
+                        android:text="NaN"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/userName2"
+                        android:text="Precio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/tvPrecio1"
+                        android:text="000.00"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/tvFecha"
+                        android:text="Fecha de creacion"
+                        android:layout_marginTop="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:id="@+id/btnActualizar"
+                            android:layout_weight="1"
+                            android:text="Editar"
+                            android:onClick="editar"
+                            android:textColor="@android:color/white"
+                            android:background="@color/colorPrimaryDark"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"/>
+
+                        <Button
+                            android:id="@+id/btnEditInfo"
+                            android:layout_weight="1"
+                            android:text="Eliminar"
+                            android:textColor="@android:color/white"
+                            android:background="@color/colorAccent"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.github.fafaldo.fabtoolbar.widget.FABToolbarLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -23,11 +24,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     //componentes
     private EditText edtCodigo, edtDescripcion, edtPrecio;
     private Button btnGuardar, btnConsultar1, btnConsultar2, btnEliminar, btnActualizar;
     private TextView tvResultado;
+
+    private FABToolbarLayout morph;
 
     boolean inputEt = false;
     boolean inputEd = false;
@@ -85,16 +88,29 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        /*
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 /*Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();*/
+                        .setAction("Action", null).show();
                 ventanas.search(MainActivity.this);
             }
         });
+        */
+
+        //barra toolbar del floatingActionButton
+        FloatingActionButton fab = findViewById(R.id.fab);
+        morph = findViewById(R.id.fabtoolbar);
+        View uno, dos, tres, cuatro, cinco;
+
+        fab.setOnClickListener(this);
+        uno = findViewById(R.id.uno);
+        dos = findViewById(R.id.dos);
+        tres = findViewById(R.id.tres);
+        cuatro = findViewById(R.id.cuatro);
+        cinco = findViewById(R.id.cinco);
 
         edtCodigo = findViewById(R.id.edtCodigo);
         edtDescripcion = findViewById(R.id.edDescripcion);
@@ -104,6 +120,12 @@ public class MainActivity extends AppCompatActivity {
         btnConsultar2 = findViewById(R.id.btnCOnsultaDesc);
         btnEliminar = findViewById(R.id.btnEliminar);
         btnActualizar = findViewById(R.id.btnActualizar);
+
+        uno.setOnClickListener(this);
+        dos.setOnClickListener(this);
+        tres.setOnClickListener(this);
+        cuatro.setOnClickListener(this);
+        cinco.setOnClickListener(this);
 
         String senal = "";
         String codigo = "";
@@ -325,6 +347,35 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 Toast.makeText(this, "No se ha encontrado resultado para la busqueda", Toast.LENGTH_SHORT).show();
             }
+        }
+    }
+
+    @Override
+    public void onClick(View view) {
+        if (view.getId() == R.id.fab){
+            morph.show();
+        }
+
+        switch (view.getId()){
+            case R.id.uno:
+                alta(view);
+                break;
+
+            case R.id.dos:
+                deleteCode(view);
+                break;
+
+            case R.id.tres:
+                editar(view);
+                break;
+
+            case R.id.cuatro:
+                morph.hide();
+                break;
+
+            case R.id.cinco:
+                ventanas.search(MainActivity.this);
+                break;
         }
     }
 }

@@ -21,14 +21,106 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_main" />
-
+    <!--aqui hare el cambio del button
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_search_category_default" />
+        app:srcCompat="@android:drawable/ic_search_category_default" />-->
+    <com.github.fafaldo.fabtoolbar.widget.FABToolbarLayout
+        android:layout_width="match_parent"
+        android:id="@+id/fabtoolbar"
+        app:containerId="@id/fabtoolbar_container"
+        app:fabId="@id/fab"
+        app:fabToolbarId="@id/fabtoolbar_toolbar"
+        app:fadeInFraction="0.2"
+        app:hideDuration="600"
+        app:horizontalMargin="@dimen/fab_margin"
+        app:showDuration="600"
+        app:verticalMargin="@dimen/fab_margin"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/content_main" />
+
+        <RelativeLayout
+            android:id="@+id/fabtoolbar_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_size="normal"
+                app:borderWidth="0dp"
+                android:backgroundTint="@color/colorPrimary"
+                app:srcCompat="@android:drawable/ic_search_category_default" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/fabtoolbar_toolbar"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_height="70dp">
+            
+            <ImageView
+                android:layout_width="0dp"
+                android:id="@+id/uno"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                android:tooltipText="Guardar"
+                android:src="@drawable/ic_baseline_save_alt_24"
+                android:layout_height="match_parent"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:id="@+id/dos"
+                android:layout_weight="1"
+                android:tooltipText="Borrar"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_baseline_delete_forever_24"
+                android:layout_height="match_parent"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:id="@+id/tres"
+                android:tooltipText="Editar"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_baseline_edit_24"
+                android:layout_height="match_parent"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:id="@+id/cinco"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                android:tint="#000"
+                android:tooltipText="Cerrar"
+                android:src="@drawable/ic_baseline_search_24"
+                android:layout_height="match_parent"
+                tools:ignore="UseAppTint" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:id="@+id/cuatro"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                android:tint="#000"
+                android:tooltipText="Cerrar"
+                android:src="@drawable/ic_baseline_cancel_24"
+                android:layout_height="match_parent"
+                tools:ignore="UseAppTint" />
+
+
+
+        </LinearLayout>
+
+    </com.github.fafaldo.fabtoolbar.widget.FABToolbarLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
